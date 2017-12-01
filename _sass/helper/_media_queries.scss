@@ -1,0 +1,44 @@
+$on-palm            : 550px;
+$on-tablet          : 768px;
+$on-laptop          : 900px;
+$on-desktop         : 1200px;
+$on-widescreen      : 1450px;
+$on-tv              : 1920px;
+
+// Media Query Mixins
+
+@mixin palm {
+  @media screen and (min-width: #{$on-palm}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{$on-tablet}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: #{$on-laptop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$on-desktop}) {
+    @content;
+  }
+}
+
+@mixin widescreen {
+  @media screen and (min-width: #{$on-widescreen}) {
+    @content;
+  }
+}
+
+@mixin tv {
+  @media screen and (min-width: #{$on-tv}) {
+    @content;
+  }
+}

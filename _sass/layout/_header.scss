@@ -1,0 +1,194 @@
+.site-wrapper {
+    margin-left: 25px;
+    margin-right: 25px;
+
+    @include desktop {
+        margin:0 75px;
+    }
+}
+.site-menu {
+    color: $black;
+    display: none;
+
+    @include laptop {
+        display: inline-block;
+    }
+
+    ul {
+        padding-left: 20px;
+
+        li {
+            display: inline-block;
+            font-weight: bold;
+            padding-right: 8px;
+            text-transform: uppercase;
+
+            a {
+                color: $black;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.site-logo {
+    display: inline-block;
+    position: relative;
+    z-index: 501;
+}
+.call_section {
+    display: none;
+    width: 28%;
+
+    @include laptop {
+        display: inline-block;
+    }
+
+    @include desktop {
+        width: 20%;
+        max-width: 265px;
+    }
+}
+.call_now {
+    text-align: right;
+    text-transform: uppercase;
+}
+.logo-section {
+    width: 70%;
+}
+.call_btn {
+    background: $black;
+    color: $white;
+    margin-left: 6px;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+.call_btn:hover {
+    cursor: pointer;
+}
+.call_icon {
+    padding-right: 8px;
+}
+.site-header {
+    padding: 10px 0;
+    position: relative;
+
+    @include laptop {
+        padding: 10px 0;
+    }
+}
+
+// Overlay
+#menu-container {
+	height: 50px;
+	position: relative;
+	width: 100px;
+
+	@include palm {
+		width: 50px;
+	}
+}
+.menuButton {
+	background: transparent !important;
+	border: none !important;
+	color: #000 !important;
+	font-size: 48px !important;
+	height: 100% !important;
+	position: relative !important;
+	width: 100% !important;
+	margin-top: -12px;
+	font-weight: lighter;
+	-webkit-font-smoothing: antialiased;
+}
+.menuButton:active {
+	position: relative;
+	top: 1px;
+}
+.menuButton:hover {
+	-o-transition:.75s;
+    -ms-transition:.75s;
+    -moz-transition:.75s;
+    -webkit-transition:.75s;
+    transition:.75s;
+}
+.overlay {
+	background-color: rgba(230,79,76,0.97);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 500;
+}
+.overlay nav {
+	position: relative;
+}
+.overlay ul {
+	display: inline-block;
+	list-style: none;
+	margin-left: 20px;
+	padding: 0;
+	position: relative;
+
+	@include tablet {
+		margin-left: 50px;
+	}
+}
+.overlay ul li {
+	margin:0;
+	padding: 0;
+	width: 100%;
+	padding-bottom: 20px;
+}
+.overlay ul li a {
+	color: #fff;
+	font-size: 38px;
+	line-height: 44px;
+	font-weight: bold;
+	text-decoration: none;
+
+	@include palm {
+		font-size: 60px;
+		line-height: 60px;
+	}
+
+	@include tablet {
+		font-size: 70px;
+		line-height: 70px;
+	}
+
+	@include desktop {
+		font-size: 90px;
+		line-height: 80px;
+	}
+}
+.overlay ul li a:hover {
+	color: black;
+}
+.overlay-close {
+	background: url('../assets/img/icon_close.png') no-repeat center center !important;
+	background-size: contain !important;
+	border: none !important;
+	color: transparent !important;
+	height: 40px !important;
+	outline: none;
+	overflow: hidden !important;
+	// position: absolute !important;
+	// right: 35px !important;
+	text-indent: 200% !important;
+	// top: 10px !important;
+	width: 50px !important;
+	z-index: 100 !important;
+}
+.overlay-data {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+}
+.overlay-open {
+	opacity: 1;
+	transition: opacity 0.5s;
+	-webkit-transition: opacity 0.5s;
+	visibility: visible;
+}

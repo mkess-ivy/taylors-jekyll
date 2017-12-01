@@ -1,0 +1,43 @@
+.hero-bg-fixed {
+	position: fixed;
+	top:80px;
+	right:0;
+	left:0;
+	margin:auto;
+	height:calc(100vh - 175px);
+}
+.hero-bg {
+	background-size: cover;
+	background-position: center center;
+	height: calc(100vh - 175px) !important;
+}
+.hero-content {
+	color: $white;
+	text-align: center;
+	width: 90%;
+
+	@include palm {
+		width: 60%;
+	}
+}
+.hero-logo img {
+	width: 9em;
+}
+.hero-logo-title {
+	font-size: 40px;
+	font-family: $font-2;
+	text-transform: uppercase;
+	line-height: 37px;
+	padding: 80px 0 30px;
+	text-shadow: 2px 3px rgba(0,0,0,0.4);
+}
+.icon img {
+	width: 5em;
+}
+.section-header {
+	font-size: 32px;
+	font-family: $font-2;
+	text-transform: uppercase;
+	padding: 0.7em 1em;
+	letter-spacing: 3px;
+}

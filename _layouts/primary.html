@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+    <body>
+
+        {% include header.html %}
+
+        <!-- Hero -->
+        <section class="hero-bg-slider">
+            <div class="hero-bg" style="background-image:url('{{ page.slide1 }}');"></div>
+            <div class="hero-bg" style="background-image:url('{{ page.slide2 }}');"></div>
+        </section>
+        <section class="hero-bg-fixed clearfix">
+            <div class="frow centered">
+                <div class="hero-content">
+                    <div class="hero-logo">
+                        <img src="{{ page.masthead_logo }}" />
+                    </div>
+                    <div class="hero-logo-title">{{ page.masthead_title }}</div>
+                    <div class="copy">{{ page.masthead_subtitle }}</div>
+                </div>
+            </div>
+        </section>
+
+        {% include footer.html %}
+
+  </body>
+
+</html>

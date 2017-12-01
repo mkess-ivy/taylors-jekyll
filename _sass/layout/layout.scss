@@ -1,0 +1,41 @@
+body {
+	font-family: $font-1;
+	-webkit-font-smoothing: antialiased;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+.flex-centered {
+	height: 100%;
+	justify-content: flex-start !important;
+	align-items: center;
+}
+
+/* ====================
+REUSABLE CLASSES
+======================= */
+.block {
+	display: block;
+}
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.group {
+	text-align: center;
+}
+.spacer {
+	padding: 1.5em 0;
+}
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+.coming-soon {
+	padding: 14em 0;
+	text-align: center;
+	text-transform: uppercase;
+}
