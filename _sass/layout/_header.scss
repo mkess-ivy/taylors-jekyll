@@ -45,7 +45,7 @@
     }
 
     @include desktop {
-        width: 20%;
+        // width: 20%;
         max-width: 265px;
     }
 }
@@ -54,7 +54,10 @@
     text-transform: uppercase;
 }
 .logo-section {
-    width: 70%;
+    width: 50%;
+    @include palm {
+        width: 70%;
+    }
 }
 .call_btn {
     background: $black;
@@ -82,11 +85,11 @@
 #menu-container {
 	height: 50px;
 	position: relative;
-	width: 100px;
+	width: 50px;
 
-	@include palm {
-		width: 50px;
-	}
+	// @include palm {
+	// 	width: 50px;
+	// }
 }
 .menuButton {
 	background: transparent !important;
@@ -112,7 +115,7 @@
     transition:.75s;
 }
 .overlay {
-	background-color: rgba(230,79,76,0.97);
+	background-color: rgba(201,179,136,0.9);
 	height: 100%;
 	left: 0;
 	position: fixed;
@@ -126,26 +129,27 @@
 .overlay ul {
 	display: inline-block;
 	list-style: none;
-	margin-left: 20px;
 	padding: 0;
 	position: relative;
-
-	@include tablet {
-		margin-left: 50px;
-	}
 }
 .overlay ul li {
 	margin:0;
 	padding: 0;
 	width: 100%;
 	padding-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
 }
 .overlay ul li a {
-	color: #fff;
+	color: $black;
 	font-size: 38px;
 	line-height: 44px;
 	font-weight: bold;
 	text-decoration: none;
+
+    &:hover {
+        @extend %hover;
+    }
 
 	@include palm {
 		font-size: 60px;
@@ -162,9 +166,6 @@
 		line-height: 80px;
 	}
 }
-.overlay ul li a:hover {
-	color: black;
-}
 .overlay-close {
 	background: url('../assets/img/icon_close.png') no-repeat center center !important;
 	background-size: contain !important;
@@ -173,10 +174,7 @@
 	height: 40px !important;
 	outline: none;
 	overflow: hidden !important;
-	// position: absolute !important;
-	// right: 35px !important;
 	text-indent: 200% !important;
-	// top: 10px !important;
 	width: 50px !important;
 	z-index: 100 !important;
 }
@@ -191,4 +189,11 @@
 	transition: opacity 0.5s;
 	-webkit-transition: opacity 0.5s;
 	visibility: visible;
+}
+
+// Mobile Menu
+.mobile_menu {
+    @include laptop {
+        display: none;
+    }
 }

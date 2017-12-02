@@ -6,12 +6,9 @@
             </div>
             <div class="site-menu">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="barbers.html">Barbers</a></li>
-                    <li><a href="lookbook.html">Lookbook</a></li>
-                    <li><a href="taylors-story.html">Taylor's Story</a></li>
-                    <li><a href="careers.html">Careers</a></li>
+                    {% for item in site.data.menu %}
+                    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -33,14 +30,12 @@
                         <button type="button" class="overlay-close">Close</button>
                     </div>
                 </div>
-                <div class="frow flex-centered">
+                <div class="frow centered" style="margin-top:-82px;">
                     <nav>
                         <ul>
-                            <li><a href="/work">work</a></li>
-                            <li><a href="/about">about</a></li>
-                            <li><a href="/our-team">our team</a></li>
-                            <li><a href="http://www.greenmountwestcc.org" target="_blank">greenmount west</a></li>
-                            <li><a href="mailto:info@noisytenants.com">contact</a></li>
+                            {% for item in site.data.menu %}
+                            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                            {% endfor %}
                         </ul>
                     </nav>
                 </div>
