@@ -1,0 +1,35 @@
+/* ====================
+FAQs
+======================= */
+.faqs-list {
+	list-style: none;
+	width: 80%;
+	margin: 3em auto;
+
+    @include tablet {
+        width: 700px;
+    }
+}
+.faqs-list li {
+	padding-bottom: 3em;
+	font-size: 18px;
+	line-height: 1.5;
+
+    @include palm {
+        float: left;
+		width: 45%;
+		margin-right: 20px;
+		padding: 5px;
+		margin-bottom: 20px;
+    }
+}
+.faqs-list li span {
+	font-size: 18px;
+	font-weight: bolder;
+	display: block;
+	letter-spacing: 1px;
+	padding-bottom: 15px;
+}
+.icon {
+	text-align: center;
+}

@@ -27,6 +27,10 @@
                 color: $black;
                 cursor: pointer;
                 text-decoration: none;
+
+                &:hover {
+                    @extend %hover;
+                }
             }
         }
     }

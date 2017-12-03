@@ -1,0 +1,42 @@
+---
+layout: fullpage
+---
+
+
+
+<section class="page-wrapper">
+    <section class="section-header-group">
+        <div class="beta-title-wrapper">
+            <div class="subtitle">peek inside our</div>
+            <div class="title">barbershop</div>
+        </div>
+    </section>
+
+    <section id="lookbook-video">
+        <div class="lookbook_video">
+            <iframe src="{{ page.video }}?color=9E8145&portrait=0" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="section-header-group">
+
+        <div class="beta-title-wrapper">
+            <div class="subtitle">view our</div>
+            <div class="title">gallery</div>
+        </div>
+    </section>
+
+    <section>
+        <!-- Start Image Gallery -->
+        <ul class="luminous_lightbox clearfix">
+            {% for item in site.data.lookbook-gallery %}
+            <li>
+              <a class="gallery-demo" href="{{ item.image }}?w=1600">
+                <img src="{{ item.image }}?w=100" alt="{{ item.caption }}" class="gallery_img">
+              </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+</section>
