@@ -2,13 +2,11 @@
     url: /
 -   title: services
     url: /services
--   title: barbers
-    url: /barbers
--   title: lookbook
-    url: /lookbook
 -   title: taylor's story
     url: /taylors-story
 -   title: careers
     url: /careers
+-   title: shop
+    url: /shop
 -   title: faqs
     url: /faqs

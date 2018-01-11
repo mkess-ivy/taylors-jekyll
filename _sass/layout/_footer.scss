@@ -1,16 +1,53 @@
+.footer_cta {
+	color: $white;
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 7px auto 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 120px;
+
+    @include laptop {
+        width: auto;
+    }
+
+	&:hover {
+		color: $black;
+        // border: 1px solid $black;
+	}
+
+	div {
+		background: $black;
+        border: 1px solid $black;
+		padding: 5px 0;
+		margin: auto;
+        text-align: center;
+		transition: 0.4s;
+
+		&:hover {
+			background: $white;
+			transition: 0.4s;
+            border: 1px solid $black;
+		}
+
+	}
+}
 .logo-text {
     font-size: 16px;
     font-weight: bold;
     line-height: 1.2;
-    padding-left: 15px;
     text-transform: uppercase;
     width: 140px;
+
+    @include laptop {
+        padding-left: 15px;
+    }
 }
 .copyright-footer {
     font-size: 12px;
     margin-top: 10px;
 }
-
 
 .footer-logo-section {
     display: none;
@@ -19,17 +56,35 @@
         display: block;
     }
 }
+.footer-logo-section-mobile {
+    margin: 25px auto 10px;
+
+    @include laptop {
+        display: none;
+    }
+
+    .footer-img {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .logo-text {
+        text-align: center;
+    }
+}
 .footer-location {
     width: 100%;
     text-align: center;
 
     @include laptop {
-        width: auto;
+        width: 600px;
         text-align: right;
     }
 
     .location-header {
         font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding-bottom: 5px;
     }
     .location-address {
         font-size: 14px;
@@ -47,10 +102,54 @@
         }
         .social-icon {
             padding-left: 10px;
-        }  
+        }
     }
 
 }
 .site-footer {
 	padding: 10px 0;
+}
+.footer_section_mini {
+    margin: 15px 0 25px;
+    width: 100%;
+
+
+    @include laptop {
+        margin: 7px 0 0 12px;
+        width: auto;
+        border-right: 1px solid #979797;
+        padding-right: 15px;
+    }
+
+    &:last-child {
+        @include laptop {
+            border-right: none;
+        }
+    }
+
+    .location-address {
+        span {
+            display: block;
+        }
+    }
+}
+
+// Social Section
+.social_section {
+    background-color: $darkbrown;
+
+    ul {
+        text-align: center;
+        padding: 10px 0;
+
+        li {
+            display: inline-block;
+            padding-right: 15px;
+
+            a {
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
 }

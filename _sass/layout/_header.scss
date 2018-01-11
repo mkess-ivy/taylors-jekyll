@@ -19,9 +19,14 @@
 
         li {
             display: inline-block;
+            font-size: 18px;
             font-weight: bold;
-            padding-right: 8px;
+            padding-right: 12px;
             text-transform: uppercase;
+
+            @include desktop {
+                padding-right: 20px;
+            }
 
             a {
                 color: $black;
@@ -39,6 +44,7 @@
     display: inline-block;
     position: relative;
     z-index: 501;
+    width: 65px;
 }
 .call_section {
     display: none;
@@ -90,10 +96,6 @@
 	height: 50px;
 	position: relative;
 	width: 50px;
-
-	// @include palm {
-	// 	width: 50px;
-	// }
 }
 .menuButton {
 	background: transparent !important;
@@ -119,7 +121,7 @@
     transition:.75s;
 }
 .overlay {
-	background-color: rgba(201,179,136,0.9);
+	background-color: rgba(201,179,136,0.97);
 	height: 100%;
 	left: 0;
 	position: fixed;
@@ -175,12 +177,13 @@
 	background-size: contain !important;
 	border: none !important;
 	color: transparent !important;
-	height: 40px !important;
+	height: 30px !important;
 	outline: none;
 	overflow: hidden !important;
 	text-indent: 200% !important;
-	width: 50px !important;
+	width: 30px !important;
 	z-index: 100 !important;
+    margin: 7px 10px 0 0;
 }
 .overlay-data {
 	opacity: 0;
