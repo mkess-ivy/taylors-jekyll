@@ -1,0 +1,609 @@
+// FAQs Section
+@function random-color($min: 0, $max: 255, $alpha: 1) {
+	@if $min < 0 {
+		$min: -1;
+	} @else {
+		$min: $min - 1;
+	}
+	@if $max > 255 {
+		$max: 256;
+	} @else {
+		$max: $max + 1;
+	}
+	$red: random($max) + $min;
+	$green: random($max) + $min;
+	$blue: random($max) + $min;
+	@return rgba($red, $green, $blue, $alpha);
+}
+
+$ultralight: #fefefe;
+$primary: random-color($min: 100, $max: 100);
+$primary-light: mix(#ffffff, $primary, 25%);
+$primary-dark: mix(#000000, $primary, 25%);
+
+
+// Alpha Section
+.alpha_header_section {
+    text-align: center;
+
+    @include desktop {
+        margin-top: 125px;
+    }
+
+    .alpha_header {
+        font-family: $font-2;
+        font-size: 20px;
+		font-weight: 700;
+        letter-spacing: 0.5px;
+        line-height: 1.4;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+
+        @include tablet {
+            margin: 0 auto 25px;
+            width: 60%;
+            max-width: 360px;
+			font-size: 30px;
+        }
+        @include desktop {
+            max-width: 470px;
+            // font-size: 28px;
+        }
+    }
+    .alpha_copy {
+        font-size: 18px;
+        padding: 20px 0;
+		line-height: 1.4;
+
+        @include tablet {
+            width: 80%;
+            margin: auto;
+            font-size: 22px;
+        }
+        @include desktop {
+            max-width: 600px;
+            font-size: 24px;
+
+        }
+    }
+}
+
+.beta-title-wrapper {
+	text-transform: uppercase;
+	font-family: $font-2;
+	font-weight: 700;
+	color: $lightbrown;
+	letter-spacing: 0.5px;
+	font-size: 18px;
+	padding: 50px 20px;
+	text-align: center;
+
+	@include tablet {
+		font-size: 20px;
+	}
+
+	@include widescreen {
+		font-size: 24px;
+	}
+
+	.subtitle {
+		padding-bottom: 3px;
+
+		@include tablet {
+			padding-bottom: 10px;
+		}
+	}
+
+	.title {
+		@extend .section-header;
+		font-size: 20px !important;
+		letter-spacing: 1px !important;
+		padding: 0 !important;
+		color: $black;
+
+		@include tablet {
+			font-size: 28px !important
+		}
+
+		@include widescreen {
+			font-size: 36px !important;
+		}
+	}
+}
+
+// Delta Header Section
+.delta_header_section {
+    margin-bottom: 35px;
+
+    @include laptop {
+        margin-bottom: 50px;
+    }
+
+    .delta_logo {
+        display: inline-block;
+        width: 75px;
+        margin-right: 20px;
+
+        @include tablet {
+            width: 125px;
+        }
+    }
+    .delta_header {
+        display: inline-block;
+        font-family: $font-2;
+        font-size: 18px;
+		font-weight: 700;
+        padding-top: 15px;
+
+        @include tablet {
+            font-size: 32px;
+        }
+
+        @include desktop {
+            font-size: 38px;
+            padding-top: 20px;
+        }
+
+        .delta_subheader {
+            font-family: $font-1;
+			font-weight: 300;
+            padding-top: 3px;
+            font-size: 18px;
+
+            @include tablet {
+                font-size: 26px;
+            }
+        }
+    }
+}
+
+// Navigation Section
+.navigation_section {
+    margin: 50px 0;
+    text-align: center;
+
+    .navigation_icon {
+        display: inline-block;
+        margin-right: 25px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+// Services
+.services_section {
+    text-align: center;
+
+    @include tablet {
+        margin: 50px 0;
+    }
+
+    .services_header {
+        font-family: $font-2;
+        font-size: 24px;
+		font-weight: 700;
+        letter-spacing: 1px;
+        padding: 20px 0 60px;
+        text-transform: uppercase;
+
+        @include tablet {
+            text-align: left;
+        }
+
+        @include desktop {
+            font-size: 26px;
+        }
+    }
+
+    ul {
+        li {
+            font-size: 22px;
+            padding-bottom: 25px;
+            text-transform: uppercase;
+
+            @include tablet {
+                width: 45%;
+                text-align: left;
+            }
+
+            @include desktop {
+                font-size: 24px;
+            }
+
+            div {
+                text-transform: initial;
+                padding: 7px 0;
+                line-height: 1.2;
+                font-size: 18px;
+
+                @include desktop {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+// Barbering Section
+.barbering_section {
+    .the_barbers {
+        margin: 50px auto 0;
+        width: 275px;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include desktop {
+            margin-bottom: 40px;
+        }
+
+        .barber_single {
+            text-align: center;
+            width: 250px;
+			margin: 0 auto 75px;
+
+			@include laptop {
+				width: 300px;
+			}
+
+			@include desktop {
+				width: 275px;
+			}
+
+            .barber_avatar {
+                background-size: cover;
+                background-color: $lightbrown;
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 100%;
+                height: 250px;
+                margin-bottom: 40px;
+				position: relative;
+
+				@include laptop {
+					height: 300px;
+				}
+
+				@include desktop {
+					height: 275px;
+				}
+
+
+				&:hover {
+					background-color: $lightbrown !important;
+					filter:blur(2px) opacity(75%) sepia(10%);
+					transition: 1s;
+
+
+				}
+            }
+            .barber_name {
+                font-weight: bold;
+                font-size: 24px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                margin-bottom: 25px;
+
+                .barber_title {
+                    color: $lightbrown;
+                    font-size: 18px;
+                    text-transform: lowercase;
+                }
+            }
+            .barber_description {
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 1.4;
+                margin-bottom: 25px;
+
+                @include tablet {
+                    height: 150px;
+                }
+            }
+
+        }
+    }
+}
+
+// CTA
+.brown_cta {
+    color: $white;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 7px auto 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 120px;
+
+    &:hover {
+        color: $lightbrown;
+    }
+
+    div {
+        background: $lightbrown;
+        border: 1px solid;
+        padding: 5px 0;
+        margin: auto;
+        text-align: center;
+        transition: 0.4s;
+
+        &:hover {
+            background: $white;
+            transition: 0.4s;
+            border: 1px solid $lightbrown;
+        }
+
+    }
+}
+.home_cta {
+	color: $black;
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 25px auto 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 125px;
+
+	@include tablet {
+		font-size: 24px;
+		width: 150px;
+	}
+
+	&:hover {
+		color: $white;
+	}
+
+	div {
+		background: $white;
+		padding: 5px 0;
+		margin: auto;
+		transition: 0.4s;
+        border: 1px solid $white;
+
+		&:hover {
+			background: none;
+			transition: 0.4s;
+            border: 1px solid $white;
+		}
+
+	}
+}
+.footer_cta {
+	color: $white;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 7px auto 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 120px;
+
+    @include laptop {
+        width: auto;
+    }
+
+	&:hover {
+		color: $black;
+	}
+
+	div {
+		background: $black;
+        border: 1px solid $black;
+		padding: 5px 0;
+		margin: auto;
+        text-align: center;
+		transition: 0.4s;
+
+		&:hover {
+			background: $white;
+			transition: 0.4s;
+            border: 1px solid $black;
+		}
+
+	}
+}
+
+// Biography Section
+.biography_section {
+    font-size: 20px;
+
+    @include tablet {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+    @include desktop {
+        font-size: 24px;
+        line-height: 1.6;
+    }
+
+    p {
+        @include desktop {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+// Career Section
+.career_section {
+    margin-top: 75px;
+}
+.career_icon {
+    width: 100%;
+    margin-bottom: 75px;
+
+    @include tablet {
+        width: 50%;
+        margin-bottom: 100px;
+    }
+
+    @include desktop {
+        width: 33%;
+        margin-bottom: 50px;
+    }
+
+    .career_title {
+        text-transform: uppercase;
+        color: $lightbrown;
+        font-family: $font-2;
+        font-size: 18px;
+		font-weight: 700;
+        padding: 25px 0 15px;
+    }
+    img {
+        width: 90px;
+
+		@include tablet {
+			width: 125px;
+		}
+    }
+}
+
+
+// FAQ Section -- Accordion
+.accordion {
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    position: relative;
+
+    &.active {
+        .heading {
+            color: $darkbrown;
+        }
+
+        .icon {
+            background: $ultralight;
+
+            &:before {
+                background: $primary-light;
+            }
+
+            &:after {
+                width: 0;
+            }
+        }
+    }
+
+    .heading {
+        display: block;
+        text-transform: initial;
+        text-decoration: none;
+        color: $darkbrown;
+        font-weight: 700;
+        font-size: 18px;
+		line-height: 1.4;
+        position: relative;
+        padding: 1.5rem 0.5rem 1.5rem 3.5rem;
+        transition: 0.3s ease-in-out;
+
+        @include palm {
+            font-size: 22px;
+        }
+
+		@include widescreen {
+			font-size: 24px;
+		}
+
+        &:hover {
+            color: $lightbrown;
+
+            .icon {
+                &:before,
+                &:after {
+                    background: $lightbrown;
+                }
+            }
+        }
+    }
+	.content {
+        display: none;
+
+		@include tablet {
+			margin-left: 4em;
+		}
+
+        p {
+            margin-top: 0;
+            font-size: 16px;
+			line-height: 1.4;
+			color: $black;
+
+			@include palm {
+				font-size: 18px;
+			}
+
+            @include laptop {
+                font-size: 22px;
+            }
+
+			@include widescreen {
+				font-size: 24px;
+			}
+        }
+
+        @include laptop {
+            line-height: 1.75;
+        }
+    }
+
+    .icon {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid $ultralight;
+        border-radius: 3px;
+        transform: translateY(-50%);
+
+        &:before,
+        &:after {
+            content: '';
+            width: 1.25rem;
+            height: 0.25rem;
+            background: $darkbrown;
+            position: absolute;
+            border-radius: 3px;
+            left: 50%;
+            top: 50%;
+            transition: 0.3s ease-in-out;
+            transform: translate(-50%, -50%);
+        }
+
+        &:after {
+            transform: translate(-50%, -50%)
+                       rotate(90deg);
+            z-index: -1;
+        }
+    }
+
+
+}
+
+
+// Misc
+.section-header-group {
+	text-align: center;
+	padding:25px 0 35px;
+
+	@include laptop {
+		padding: 25px 0 75px;
+	}
+}
+.alpha_icon {
+	padding-top: 10px;
+}
+.gallery-demo img {
+	@include tablet {
+		height: 385px;
+	}
+}

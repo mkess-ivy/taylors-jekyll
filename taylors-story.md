@@ -1,7 +1,10 @@
 ---
-layout: page-lookbook
-title: Lookbook
-permalink: /lookbook/
+layout: page-taylorsstory
+title: Taylor's Story
+permalink: /taylors-story/
+
+[//]: #Header
+bg_header: /assets/img/fullpage-header.jpg
 
 [//]: #Video
 video: https://player.vimeo.com/video/201186507

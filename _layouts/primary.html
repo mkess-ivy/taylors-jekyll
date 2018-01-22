@@ -7,12 +7,14 @@
 
         {% include header.html %}
 
+        <div class="se-pre-con"></div>
         <!-- Hero -->
         <section class="hero-bg-slider">
             <div class="hero-bg" style="background-image:url('{{ page.slide1 }}');"></div>
             <div class="hero-bg" style="background-image:url('{{ page.slide2 }}');"></div>
         </section>
-        <section class="hero-bg-fixed clearfix">
+
+        <section class="hero-bg-fixed clearfix" id="delayReveal">
             <div class="frow centered">
                 <div class="hero-content">
                     <div class="hero-logo">
@@ -20,7 +22,7 @@
                     </div>
                     <div class="hero-logo-title">{{ page.masthead_title }}</div>
                     <div class="copy copy-contained">{{ page.masthead_subtitle }}</div>
-                    <a class="home_cta" href="#">
+                    <a class="home_cta" href="tel:8046431600" alt="Call Taylor's Barbershop to Book Now">
                         <div>
                             book now
                         </div>

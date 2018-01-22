@@ -1,0 +1,25 @@
+<div class="the_barbers" id="thebarbers">
+    <div class="frow justify-between">
+        {% for item in site.data.barbers %}
+        <div class="barber_single potato">
+            <div class="barber_avatar" style="background-image: url('{{ item.avatar }}');"></div>
+            <div class="barber_name">
+                {{ item.name }}
+                <div class="barber_title">
+                    {{ item.title }}
+                </div>
+            </div>
+            <div class="barber_description">
+                {{ item.description }}
+            </div>
+            <div class="barber_booking">
+                <a href="tel:8046431600" class="brown_cta">
+                    <div>
+                        book now
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

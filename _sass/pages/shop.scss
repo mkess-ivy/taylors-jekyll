@@ -1,0 +1,148 @@
+// Shop Section
+.shop_section {
+	margin: 100px 0 50px;
+
+	.shop_item {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 75px;
+
+		@include tablet {
+			width: 50%;
+		}
+		@include desktop {
+			width: 33%;
+		}
+		.shop_image {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 300px;
+		}
+		.shop_image_name {
+			padding: 25px 0 10px;
+			font-size: 20px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.shop_image_price {
+			font-size: 20px;
+			color: #403838;
+		}
+	}
+}
+.snipcart-add-item {
+	margin-top: 15px;
+	text-transform: uppercase;
+	background-color: $darkbrown;
+	color: $white;
+	padding: 5px 12px;
+	border: 1px solid $darkbrown;
+	font-weight: bold;
+
+    @include small {
+        font-size: 16px;
+    }
+
+    @include tablet {
+        padding: 7px 20px;
+    }
+}
+
+.single_shop_item {
+    margin-bottom: 75px;
+
+    .single_product_image {
+        @extend %bg_img;
+        height: 40vh;
+        width: 100%;
+        margin: 50px 0;
+
+        @include small {
+            max-width: 400px;
+            margin: 50px auto;
+        }
+
+        @include tablet {
+            max-width: 500px;
+            height: 60vh;
+        }
+    }
+    .single_product_title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 22px;
+        margin-bottom: 25px;
+
+        @include tablet {
+            font-size: 28px;
+        }
+
+        span {
+            display: block;
+            font-size: 18px;
+
+            @include tablet {
+                font-size: 20px;
+            }
+        }
+    }
+    .single_product_copy {
+        text-align: center;
+        line-height: 1.4;
+        margin-bottom: 35px;
+
+        @include small {
+            font-size: 18px;
+            padding: 0 2.5em;
+        }
+
+        @include tablet {
+            font-size: 22px;
+        }
+    }
+}
+.shop_cta {
+    text-align: center;
+}
+
+// Testimonial Section
+.testimonial_section {
+    background: #D8D8D8;
+    padding: 25px;
+    text-align: center;
+
+    @include palm {
+        margin: 0 3em;
+    }
+
+    @include laptop {
+        margin: 150px 5em 50px;
+    }
+
+    @include widescreen {
+        max-width: 1200px;
+        margin: 150px auto 50px;
+    }
+
+    .testimonial_header {
+        text-transform: uppercase;
+        font-size: 22px;
+        padding: 15px 0;
+        letter-spacing: 0.5px;
+    }
+    .testimonial_copy {
+        line-height: 1.4;
+        font-size: 18px;
+        padding: 25px 0 0;
+
+        &:after {
+            content:'';
+            display: block;
+            width: 50px;
+            height: 1px;
+            background: $black;
+            margin: 30px auto;
+        }
+    }
+}

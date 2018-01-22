@@ -1,0 +1,66 @@
+---
+layout: fullpage
+---
+
+<div class="se-pre-con"></div>
+
+<section class="page-wrapper">
+    <section>
+        <div class="delta_header_section">
+            <div class="frow justify-start">
+                <div class="delta_logo">
+                    <img src="/assets/img/taylors-logo-hero.png" alt="Taylor's Barbershop Logo" />
+                </div>
+                <div class="delta_header">
+                    Taylor's Barbershop
+                    <div class="delta_subheader">
+                        since 2009
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="biography_section potato">
+            <p>
+                Dawayne E. Taylor, founder and owner of Taylor's Barbershop, began falling in love with cutting hair as an early teen, by the grace of his father, who introduced barbering to him.  From experimenting with his own hair then expanding to friends and family, Mr. Taylor continued to nurture his skillset in the dorms of Williams Hall on Virginia State University’s campus for incoming freshmen and players of the football team.
+            </p>
+            <p>
+                In late spring, May 2009, Mr. Taylor was able to procure an opportunity to own and operate an existing turnkey barbershop, which has since become known as Taylor’s Barbershop.  Taylor's Barbershop operates on the principles of making your experience more than a haircut with a great service and an upbeat atmosphere that fits the old and new school.  It’s a place of relaxation, therapy and conversation for men, women and kids.
+            </p>
+        </div>
+    </section>
+
+    <!-- <section class="section-header-group potato">
+        <div class="beta-title-wrapper">
+            <div class="subtitle">peek inside our</div>
+            <div class="title">barbershop</div>
+        </div>
+    </section>
+
+    <section id="lookbook-video">
+        <div class="lookbook_video">
+            <iframe src="{{ page.video }}?color=9E8145&portrait=0" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </section> -->
+
+    <section class="section-header-group potato">
+
+        <div class="beta-title-wrapper">
+            <div class="subtitle">view our</div>
+            <div class="title">gallery</div>
+        </div>
+    </section>
+
+    <section>
+        <!-- Start Image Gallery -->
+        <ul class="luminous_lightbox clearfix">
+            {% for item in site.data.lookbook-gallery %}
+            <li>
+              <a class="gallery-demo" href="{{ item.image }}?w=1600">
+                <img src="{{ item.image }}?w=100" alt="{{ item.caption }}" class="gallery_img">
+              </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+</section>

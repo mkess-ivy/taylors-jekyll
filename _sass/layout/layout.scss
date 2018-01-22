@@ -10,6 +10,17 @@ ul, li {
 	padding: 0;
 }
 
+// Preloader
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(/assets/img/preloader.gif) center no-repeat #fff;
+}
+
 .flex-centered {
 	height: 100%;
 	justify-content: flex-start !important;
@@ -33,10 +44,6 @@ REUSABLE CLASSES
 .spacer {
 	padding: 1.5em 0;
 }
-.wrapper {
-	width: 80%;
-	margin: 0 auto;
-}
 .coming-soon {
 	padding: 14em 0;
 	text-align: center;
@@ -45,21 +52,43 @@ REUSABLE CLASSES
 
 // Full Page Header
 .fullpage-header {
-	background: url('/assets/img/fullpage-header.jpg');
+
 	background-size: cover;
 	background-position: center center;
 	color: $white;
-	padding: 150px 0;
-	font-size: 36px;
+	padding: 45px 0;
+	font-size: 24px;
+	margin-bottom: 50px;
+
+	@include small {
+		padding: 70px 0;
+	}
+
+	@include tablet {
+		padding: 100px 0;
+		font-size: 36px;
+	}
 
 	.page-title {
 		text-transform: uppercase;
+		font-family: $font-2;
+		font-weight: 700;
+		text-align: center;
+
+		@include laptop {
+			text-align: left;
+		}
 	}
 
 	.fullpage-breadcrumb {
-		font-size: 18px;
+		font-size: 14px;
 		padding-top: 10px;
-		text-transform: capitalize;
+		text-transform: uppercase;
+		text-align: center;
+
+		@include laptop {
+			text-align: left;
+		}
 
 		a {
 			color: $white;
@@ -89,6 +118,48 @@ REUSABLE CLASSES
 
 // Wrapper
 .page-wrapper {
-	width: 70%;
-	margin: 0 auto;
+	width: 100%;
+	padding: 0 20px;
+
+	@include palm {
+		max-width: 500px;
+		margin: auto;
+	}
+	@include tablet {
+		margin: 0 auto;
+		max-width: 700px;
+	}
+	@include laptop {
+		max-width: 800px;
+	}
+	@include desktop {
+		max-width: 1000px;
+	}
+	@include widescreen {
+		max-width: 1200px;
+	}
+}
+.fullpage_wrapper {
+	padding: 0 25px;
+
+	@include palm {
+		margin: 0 auto;
+		padding: 0 50px;
+	}
+	@include tablet {
+		width: 650px;
+	}
+	@include laptop {
+		width: 750px;
+	}
+	@include desktop {
+		width: 1000px;
+	}
+}
+.fullpage_wrapper_alpha {
+	background-image: url('/assets/img/barber_pattern_bg.jpg');
+	background-repeat: repeat;
+	background-size: contain;
+	width: 100%;
+	padding: 25px;
 }

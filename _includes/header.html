@@ -2,7 +2,7 @@
     <div class="frow justify-between">
         <div class="logo-section">
             <div class="site-logo">
-                <img src="/assets/img/taylors-logo.png" />
+                <a href="/"><img src="/assets/img/taylors-logo.png" alt="Taylor's Barbershop Logo" /></a>
             </div>
             <div class="site-menu">
                 <ul>
@@ -15,9 +15,14 @@
         <div class="call_section">
             <div class="frow centered">
                 <div class="call_now">
-                    Call Today!
-                    <a class="call_btn" href="tel:8046431600">
+                    <!-- Call Today! -->
+                    <a class="call_btn" href="tel:8046431600" alt="Call Taylor's Barbershop to Book Now">
                         <span class="call_icon"><img src="/assets/img/icon_phone2.png" width="11" /></span>804-643-1600
+                    </a>
+                </div>
+                <div class="call_now">
+                    <a class="call_btn snipcart-checkout" href="#" alt="Check shopping cart for Taylor's Barbershop">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -30,7 +35,7 @@
                         <button type="button" class="overlay-close">Close</button>
                     </div>
                 </div>
-                <div class="frow centered" style="margin-top:-82px;">
+                <div class="frow centered mobile_menu_position">
                     <nav>
                         <ul>
                             {% for item in site.data.menu %}

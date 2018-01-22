@@ -1,19 +1,33 @@
+// Home
 .hero-bg-fixed {
+	display: none;
 	position: absolute;
 	top:80px;
 	right:0;
 	left:0;
 	margin:auto;
-	height:calc(100vh - 175px);
+	height:calc(100vh - 75px);
+
+	@include palm {
+		height: calc(100vh - 150px);
+	}
+
+	@include laptop {
+		height: calc(100vh - 240px);
+	}
 }
 .hero-bg {
 	background-size: cover;
 	background-position: center center;
-	height: calc(100vh - 150px) !important;
+	height: calc(100vh - 75px) !important;
 	filter: grayscale(125%) contrast(120%);
 
+	@include palm {
+		height: calc(100vh - 150px) !important;
+	}
+
 	@include laptop {
-		height: calc(100vh - 224px) !important;
+		height: calc(100vh - 240px) !important;
 	}
 }
 .hero-content {
@@ -29,18 +43,31 @@
 	}
 }
 .hero-logo img {
-	width: 9em;
+	width: 5em;
+
+	@include small {
+		width: 7em;
+	}
+
+	@include tablet {
+		width: 9em;
+	}
 }
 .hero-logo-title {
-	font-size: 38px;
+	font-size: 28px;
+	font-weight: 700;
 	font-family: $font-2;
 	text-transform: uppercase;
 	line-height: 1;
-	padding: 40px 0;
+	padding: 30px 0;
 	text-shadow: 2px 3px rgba(0,0,0,0.4);
 
+	@include small {
+		font-size: 40px;
+	}
 	@include palm {
 		font-size: 48px;
+		padding: 40px 0;
 	}
 	@include desktop {
 		font-size:70px;
@@ -49,18 +76,18 @@
 .icon img {
 	width: 5em;
 }
-
 .copy {
-	font-size: 24px;
+	font-size: 20px;
 	text-align: center;
 	-webkit-font-smoothing: antialiased;
-
+	@include small {
+		font-size: 24px;
+	}
 	@include palm {
-		font-size: 30px;
+		font-size: 28px;
 	}
 	@include desktop {
-		font-size: 34px;
-		padding-bottom: 30px;
+		padding-bottom: 15px;
 	}
 }
 .copy-contained {
@@ -69,30 +96,6 @@
 		margin: auto;
 	}
 }
-.home_cta {
-	color: $black;
-	display: block;
-	font-size: 24px;
-	font-weight: bold;
-	margin: 25px auto 0;
-	text-decoration: none;
-	text-transform: uppercase;
-	width: 150px;
-
-	&:hover {
-		color: $white;
-	}
-
-	div {
-		background: $white;
-		padding: 5px 0;
-		margin: auto;
-		transition: 0.4s;
-
-		&:hover {
-			background: $black;
-			transition: 0.4s;
-		}
-
-	}
+.mobile_menu_position {
+	margin-top: -25px;
 }

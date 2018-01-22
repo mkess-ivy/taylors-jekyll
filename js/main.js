@@ -1,6 +1,42 @@
 $(document).ready(function(){
 
-    // Smooth Scroll
+    // Preloader
+    $(window).load(function() {
+        $(".se-pre-con").fadeOut("slow");
+    });
+
+    // DelayReveal
+    $(function(){
+
+        setTimeout(function(){
+            $("#delayReveal").show();
+        }, 1500);
+
+    });
+
+    // Accordion
+    $('.accordion-item .heading').on('click', function(e) {
+        e.preventDefault();
+
+        // Add the correct active class
+        if($(this).closest('.accordion-item').hasClass('active')) {
+            // Remove active classes
+            $('.accordion-item').removeClass('active');
+        } else {
+            // Remove active classes
+            $('.accordion-item').removeClass('active');
+
+            // Add the active class
+            $(this).closest('.accordion-item').addClass('active');
+        }
+
+        // Show the content
+        var $content = $(this).next();
+        $content.slideToggle(100);
+        $('.accordion-item .content').not($content).slideUp('fast');
+    });
+
+    // Smooth Scroll - removed so that FAQs can work
     $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();
 
@@ -13,6 +49,9 @@ $(document).ready(function(){
           window.location.hash = target;
         });
     });
+
+    // Delay reveal
+    $("#delayReveal").delay(2000).fadeIn(500);
 
     // Main Overlay Menu Functionality
     $("#overlay-menu").click(function() {

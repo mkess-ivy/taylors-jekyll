@@ -1,43 +1,32 @@
 ---
 layout: fullpage
-title: FAQs
+title: Taylor's FAQs
 permalink: /faqs/
+bg_header: /assets/img/fullpage-header.jpg
 ---
-<section class="section-header-group">
-    <div class="beta-title-wrapper">
-        <div class="subtitle">check our</div>
-        <div class="title">frequently asked questions</div>
-    </div>
-</section>
 
-<section class="page-wrapper">
-    <section id="faqs" class="contain-width clearfix">
-        <ul class="faqs-list clearfix">
-            <li>
-              <span>CAN CHILDREN COME TO THE BARBERSHOP?</span>
-              Four loko selvage celiac, leggings try-hard chicharrones tbh cray viral la croix ugh XOXO roof party master cleanse.
-            </li>
-            <li>
-              <span>WHAT PAYMENT METHODS DO YOU ACCEPT?</span>
-              Four loko selvage celiac, leggings try-hard chicharrones tbh cray viral la croix ugh XOXO roof party master cleanse.
-            </li>
-            <li class="foo">
-              <span>DO YOU ACCEPT WALK-INS?</span>
-              Four loko selvage celiac, leggings try-hard chicharrones tbh cray viral la croix ugh XOXO roof party master cleanse.
-            </li>
-            <li class="foo">
-              <span>CAN CHILDREN COME TO THE BARBERSHOP?</span>
-              Four loko selvage celiac, leggings try-hard chicharrones tbh cray viral la croix ugh XOXO roof party master cleanse.
-            </li>
-            <li class="foo">
-              <span>WHAT PAYMENT METHODS DO YOU ACCEPT?</span>
-              Four loko selvage celiac, leggings try-hard chicharrones tbh cray viral la croix ugh XOXO roof party master cleanse.
-            </li>
-            <li class="foo">
-              <span>DO YOU ACCEPT WALK-INS?</span>
-              Four loko selvage celiac, leggings try-hard chicharrones tbh cray viral la croix ugh XOXO roof party master cleanse.
-            </li>
-        </ul>
+{%  include components/beta_header.html
+    beta_subtitle="check our"
+    beta_header="frequently asked questions"
+%}
+
+<section class="fullpage_wrapper">
+    <section class="accordion">
+
+        {% for item in site.data.faqs %}
+        <div class="accordion-item potato">
+            <a href="#" class="heading">
+                <div class="icon"></div>
+                <div class="title">{{ item.faqs_title }}</div>
+            </a>
+
+            <div class="content">
+                <p>
+                    {{ item.faqs_text }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
 
     </section>
 </section>

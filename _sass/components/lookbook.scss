@@ -1,0 +1,56 @@
+// Lookbook
+.lookbook_video {
+	width: 100%;
+
+	@include tablet {
+		margin: 0 auto;
+	}
+}
+
+.video_img,
+.gallery_img,
+.lookbook_video iframe {
+	width: 100%;
+}
+.lookbook_video iframe {
+	height: 200px;
+
+	@include palm {
+		height: 300px;
+	}
+
+	@include tablet {
+		height: 370px;
+	}
+	@include laptop {
+		height: 430px;
+	}
+	@include widescreen {
+		height: 630px;
+	}
+}
+.luminous_lightbox {
+	width: 90%;
+	margin: 0 auto;
+	list-style: none;
+}
+.luminous_lightbox {
+	width: 100%;
+
+	li {
+		width: 100%;
+
+		@include tablet {
+			width: 32%;
+			float: left;
+			margin-right: 1.2%;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+.gallery_img {
+	padding-bottom: 15px;
+}

@@ -1,0 +1,17 @@
+<div class="services_section"  id="{{ include.anchor }}">
+    <div class="services_header">
+        {{ include.service_header }}
+    </div>
+    <ul class="potato">
+        <div class="frow justify-between">
+            {% for item in site.data.[include.service_list] %}
+            <li>
+                {{ item.service }}
+                <div>
+                    {{ item.description }}
+                </div>
+            </li>
+            {% endfor %}
+        </div>
+    </ul>
+</div>

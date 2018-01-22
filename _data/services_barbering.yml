@@ -1,0 +1,24 @@
+-   service: Taylor's Hair Cut
+    description: Starting at $25
+-   service: Taylor's Hot Towel Shave
+    description: Starting at $35
+-   service: Taylor's Hair Cut + Any Facial Service
+    description: Starting at $35
+-   service: Taylor's Beard Edge Up + Facial Edge Up
+    description: Starting at $23
+-   service: Taylor's Head Only Edge Up
+    description: Starting at $18
+-   service: Taylor's Teens (17 + Under)
+    description: Starting at $22
+-   service: Taylor's Teens Edge Up (17 + Under)
+    description: Starting at $17
+-   service: Taylor's Kids (12 + Under)
+    description: Starting at $17
+-   service: Taylor's Kids Edge Up (12 + Under)
+    description: Starting at $12
+-   service: Taylor's College Cutz
+    description: Monday - Wednesday w/ Student ID Starting at $22
+-   service: All Hair Specialty Services Call for Appt + Pricing
+    description: Hair Coloring, Braiding, Beijing, Undercut, Highlights, Shampoo, Deep Condition Treatment
+-   service: Other Specialty Services Call for Appt + Pricing
+    description: Facials, Neck + Scalp Massage, Eyebrows (Threading, Waxing + Razor), Manicures

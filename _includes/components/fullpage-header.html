@@ -1,6 +1,13 @@
-<section class="fullpage-header">
+<section class="fullpage-header" style="background-image: url('{{ page.bg_header }}');">
     <div class="site-wrapper">
         <div class="page-title">{{ page.title }}</div>
-        <div class="fullpage-breadcrumb"><a href="/">home</a> / {{ page.title }}</div>
+        <div class="fullpage-breadcrumb">
+            {% unless page.layout == "product-single" %}
+            <a href="/">home</a> / {{ page.title }}
+            {% endunless %}
+            {% if page.layout == "product-single" %}
+                <a href="/">home</a> / <a href="/shop">shop</a> / {{ page.title }}
+            {% endif %}
+        </div>
     </div>
 </section>

@@ -6,36 +6,13 @@
   box-sizing: border-box;
 }
 
-/**
- * Reset some basic elements
- */
+// Reset some basic elements
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
-
-
-
-/**
- * Basic styling
- */
-body {
-    // font-family: $font-brand3;
-    // font-size: $base-font-size;
-    // line-height: $base-line-height;
-    font-weight: 300;
-    color: #000 !important;
-    // background-color: $brand-color3;
-    -webkit-text-size-adjust: 100%;
-}
-
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -49,17 +26,19 @@ ul, li {
     padding: 0;
 }
 
-/**
- * Images
- */
 img {
     max-width: 100%;
     vertical-align: middle;
 }
 
-/**
- * Clearfix
- */
+// Basic styling
+body {
+    font-weight: 300;
+    color: #000 !important;
+    -webkit-text-size-adjust: 100%;
+}
+
+// Clearfix
 %clearfix {
   *zoom: 1;
   &:before, &:after {

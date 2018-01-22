@@ -1,0 +1,48 @@
+---
+layout: fullpage
+---
+<div class="fullpage_wrapper">
+    {%  include components/alpha_header.html
+        alpha_header = "Taylor's Grooming Shop"
+        alpha_copy = "Purchase select products to continue your grooming experience, stay sharp until your next appointment"
+    %}
+
+    {% for product in site.products %}
+    <div class="single_shop_item">
+        <div class="single_product_image" style="background-image: url('{{ product.product_image }}');"></div>
+        <div class="single_product_title">
+            {{ product.product_name }}
+            <span>${{ product.product_price }}</span>
+        </div>
+        <div class="single_product_copy">
+            {{ product.product_description }}
+        </div>
+        <div class="shop_cta">
+            <button
+                class="snipcart-add-item"
+                data-item-id="{{ product.product_id }}"
+                data-item-name="{{ product.product_name }}"
+                data-item-price="{{ product.product_price }}"
+                data-item-weight="20"
+                data-item-url="{{ product.url }}"
+                data-item-description="{{ product.product_description }}">
+                    Add to Cart
+            </button>
+        </div>
+
+    </div>
+    {% endfor %}
+
+
+</div>
+<div class="testimonial_section">
+    <div class="testimonial_header">
+        testimonial
+    </div>
+    <div class="testimonial_copy">
+        "Taylor’s is the best Barber Shop I’ve ever been In. The owner himself is great as well as the rest of his staff. The service is unbelievable, and I always leave with a smile on my face. I highly recommend Taylor’s if you want some great work done."
+    </div>
+    <div class="testimonial_header">
+        &mdash; Damon O.
+    </div>
+</div>
