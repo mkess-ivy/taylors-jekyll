@@ -12,6 +12,12 @@
         <section class="hero-bg-slider">
             <div class="hero-bg" style="background-image:url('{{ page.slide1 }}');"></div>
             <div class="hero-bg" style="background-image:url('{{ page.slide2 }}');"></div>
+            {% if page.slide3 %}
+                <div class="hero-bg" style="background-image:url('{{ page.slide3 }}');"></div>
+            {% endif %}
+            {% if page.slide4 %}
+                <div class="hero-bg" style="background-image:url('{{ page.slide4 }}');"></div>
+            {% endif %}
         </section>
 
         <section class="hero-bg-fixed clearfix" id="delayReveal">
