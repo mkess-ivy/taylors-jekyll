@@ -1,5 +1,6 @@
 ---
 layout: primary
+title: Home
 
 [//]: # Slides
 slide1: /assets/img/taylors-home-1-v2.jpg

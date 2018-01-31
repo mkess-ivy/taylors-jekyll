@@ -36,6 +36,28 @@ $(document).ready(function(){
         $('.accordion-item .content').not($content).slideUp('fast');
     });
 
+    // Accordion
+    $('.docs-accordion-item .docs-heading').on('click', function(e) {
+        e.preventDefault();
+
+        // Add the correct active class
+        if($(this).closest('.docs-accordion-item').hasClass('active')) {
+            // Remove active classes
+            $('.docs-accordion-item').removeClass('active');
+        } else {
+            // Remove active classes
+            $('.docs-accordion-item').removeClass('active');
+
+            // Add the active class
+            $(this).closest('.docs-accordion-item').addClass('active');
+        }
+
+        // Show the content
+        var $content = $(this).next();
+        $content.slideToggle(100);
+        $('.docs-accordion-item .docs-content').not($content).slideUp('fast');
+    });
+
     // Smooth Scroll - removed so that FAQs can work
     $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();

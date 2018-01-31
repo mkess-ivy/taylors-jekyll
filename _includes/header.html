@@ -16,8 +16,8 @@
             <div class="frow centered">
                 <div class="call_now">
                     <!-- Call Today! -->
-                    <a class="call_btn" href="tel:8046431600" alt="Call Taylor's Barbershop to Book Now">
-                        <span class="call_icon"><img src="/assets/img/icon_phone2.png" width="11" /></span>804-643-1600
+                    <a class="call_btn" href="tel:{{ site.phone }}" alt="Call Taylor's Barbershop to Book Now">
+                        <span class="call_icon"><img src="/assets/img/icon_phone2.png" width="11" /></span>{{ site.phone }}
                     </a>
                 </div>
                 <div class="call_now">
@@ -28,7 +28,7 @@
             </div>
         </div>
         <section class="mobile_menu">
-            <div id="menu-container" class="menu-btn"><button id="overlay-menu" type="button" class="menuButton">&equiv;</button></div>
+            <div id="menu-container" class="menu-btn"><button id="overlay-menu" type="button" class="menuButton"><img src="/assets/img/icon_menu.png" /></button></div>
             <div class="overlay overlay-data noScroll">
                 <div class="site-header site-wrapper">
                     <div class="frow justify-end">

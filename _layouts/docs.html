@@ -5,32 +5,84 @@
 
     <body>
 
-
+        {% include header.html %}
         <div class="se-pre-con"></div>
-        <div class="docs_masthead">
-            <div class="fullpage_wrapper">
-                <div class="docs_title">
-                    Docs
-                </div>
-                <div class="docs_subtitle">
-                    This is a guide for making updates to content on the Taylor's Barbershop website
-                </div>
+
+        <div class="docs_wrapper">
+
+            <div class="docs_masthead">
+
+                <div class="docs_masthead_title">{{ page.title }}</div>
+
+                <p>
+                    A guide to managing the Taylor's Barbershop.  Check below for a list of items that can be added or modified.  For any questions, <a href="mailto:montier.kess@gmail.com">email the site developer</a>.
+                </p>
+                <p>
+                    To make any updates, first you need to access: <a href="http://www.siteleaf.com">Siteleaf</a> and login with your github account.
+                </p>
             </div>
+
+            <section class="docs-accordion_wrapper">
+
+
+                        <div class="docs-accordion-group">
+                            <div class="docs-accordion_title">home</div>
+                            {% assign docs-category = site.docs | where:"docs-category","home" %}
+                            <section class="docs-accordion">
+                            {% for item in docs-category %}
+                                {% include components/docs-accordion-item.html %}
+                            {% endfor %}
+                            </section>
+                        </div>
+
+                        <div class="docs-accordion-group">
+                            <div class="docs-accordion_title">
+
+                            social</div>
+                            {% assign docs-category = site.docs | where:"docs-category","social" %}
+                            {% for item in docs-category %}
+                                {% include components/docs-accordion-item.html %}
+                            {% endfor %}
+                        </div>
+
+
+                        <div class="docs-accordion-group">
+                            <div class="docs-accordion_title">
+
+                            services pages</div>
+                            {% assign docs-category = site.docs | where:"docs-category","services" %}
+                            {% for item in docs-category %}
+                                {% include components/docs-accordion-item.html %}
+                            {% endfor %}
+                        </div>
+
+                        <div class="docs-accordion-group">
+                            <div class="docs-accordion_title">
+
+                            careers</div>
+                            {% assign docs-category = site.docs | where:"docs-category","careers" %}
+                            {% for item in docs-category %}
+                                {% include components/docs-accordion-item.html %}
+                            {% endfor %}
+                        </div>
+
+                        <div class="docs-accordion-group">
+                            <div class="docs-accordion_title">
+
+                            faqs</div>
+                            {% assign docs-category = site.docs | where:"docs-category","faqs" %}
+                            {% for item in docs-category %}
+                                {% include components/docs-accordion-item.html %}
+                            {% endfor %}
+                        </div>
+
+            </section>
+
         </div>
 
-        <div class="fullpage_wrapper docs_wrapper">
-
-            {{ content }}
-
-        </div>
-
-
-        <div class="page-footer-icon">
-            <img src="/assets/img/scissors-icon.png" width="50" />
-        </div>
 
         {% include footer.html %}
 
-  </body>
+    </body>
 
 </html>
